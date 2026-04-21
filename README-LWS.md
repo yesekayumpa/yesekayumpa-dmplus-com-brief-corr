@@ -87,8 +87,8 @@ Votre configuration SMTP LWS est déjà intégrée:
 ```php
 Host: mail.dmplus-group.com
 Port: 465 (SSL)
-Username: communication@dmplus-group.com
-Password: DMP-group2-com
+Username: yesekayumpab@gmail.com
+Password: Yumpa@2003
 ```
 
 ### Emails Envoyés:

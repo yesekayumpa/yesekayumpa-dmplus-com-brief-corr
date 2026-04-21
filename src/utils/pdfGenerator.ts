@@ -85,7 +85,7 @@ export const generateBriefPDF = (formData: BriefFormData, returnAsBlob: boolean 
 
     doc.text('Médina rue 37x24 / Dakar, Sénégal', 132, footerY + 3);
     doc.text('(+221) 76 619 34 10 / 33 829 58 06', 132, footerY + 7);
-    doc.text('communication@dmplus-group.com', 132, footerY + 11);
+    doc.text('yesekayumpab@gmail.com', 132, footerY + 11);
 
     // Dark Square
     doc.setFillColor(40, 40, 40);

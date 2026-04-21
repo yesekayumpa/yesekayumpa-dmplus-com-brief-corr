@@ -1,4 +1,5 @@
 import { FormData as BriefFormData } from '../types';
+import { sendEmailViaEmailJS } from './emailjsService';
 
 // Types pour le service d'email
 export interface EmailData {
@@ -7,44 +8,18 @@ export interface EmailData {
   userEmail: string;
 }
 
-// Service unifié pour l'envoi d'emails via LWS API
+// Service unifié pour l'envoi d'emails via EmailJS
 export const sendEmail = async (emailData: EmailData): Promise<{ success: boolean; message: string }> => {
   try {
     console.log('Envoi d\'email via EmailService...');
     console.log('Données:', emailData);
 
-    // Créer le contenu de l'email au format HTML
-    const emailContent = createEmailContent(emailData);
+    // Utiliser EmailJS pour envoyer l'email
+    const result = await sendEmailViaEmailJS(emailData);
 
-    // Envoyer via API LWS PHP
-    const requestData = {
-      userName: emailData.userName,
-      userEmail: emailData.userEmail,
-      nomEntreprise: emailData.formData.nomEntreprise || emailData.formData.nomProjet || 'Projet sans nom',
-      telephone: emailData.formData.telephone || 'non spécifié',
-      objectif: emailData.formData.objectifPrincipal || 'non spécifié',
-      budget: emailData.formData.budgetGlobal || 'non spécifié'
-    };
+    console.log('Résultat de l\'envoi:', result);
 
-    const response = await fetch('./lws-deploy.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestData),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Erreur HTTP: ${response.status}`);
-    }
-
-    const result = await response.json();
-    console.log('Réponse de l\'API:', result);
-
-    return {
-      success: true,
-      message: 'Email envoyé avec succès'
-    };
+    return result;
 
   } catch (error) {
     console.error('Erreur lors de l\'envoi de l\'email:', error);

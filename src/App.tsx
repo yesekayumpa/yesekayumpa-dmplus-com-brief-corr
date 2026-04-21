@@ -544,7 +544,7 @@ export default function App() {
                     Support
                   </p>
                   <p className="text-slate-600 text-[10px] font-bold group-hover:text-brand-dark transition-colors">
-                    communication@dmplus-group.com
+                    yesekayumpab@gmail.com
                   </p>
                 </div>
               </div>

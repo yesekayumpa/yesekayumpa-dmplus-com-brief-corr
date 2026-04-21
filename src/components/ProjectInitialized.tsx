@@ -93,7 +93,7 @@ Veuillez contacter le client pour finaliser son projet.
 Cordialement,
 Système automatique Digital Mind+
 Date: ${new Date().toLocaleDateString("fr-FR")} à ${new Date().toLocaleTimeString("fr-FR")}
-Contact: 76 663 82 20 | communication@dmplus-group.com`;
+Contact: 76 663 82 20 | yesekayumpab@gmail.com`;
 
         // Envoyer emails complets via EmailService API (client + entreprise avec HTML)
         const result = await sendEmail({
@@ -184,7 +184,7 @@ Veuillez contacter le client pour finaliser son projet.
 Cordialement,
 Système automatique Digital Mind+
 Date: ${new Date().toLocaleDateString("fr-FR")} à ${new Date().toLocaleTimeString("fr-FR")}
-Contact: 76 663 82 20 | communication@dmplus-group.com`;
+Contact: 76 663 82 20 | yesekayumpab@gmail.com`;
 
         // Envoyer emails complets via EmailService API (client + entreprise avec HTML)
         const result = await sendEmail({
