@@ -418,7 +418,7 @@ Ce template sera envoyé juste après le premier email et contiendra le résumé
     <div class="footer">
         <p><strong>Digital Mind+ Group</strong> - Brief de développement complet</p>
         <p>Généré automatiquement le {{date_soumission}} à {{heure_soumission}}</p>
-        <p>Contact: (+221) 76 619 34 10 / 33 829 58 06 | yesekayumpab@gmail.com</p>
+        <p>Contact: (+221) 76 619 34 10 / 33 829 58 06 | communication@dmplus-group.com</p>
         <p>NINEA : 006879227 | RCCM : SN STL 2018 A0973 | Médina rue 37x24 / Dakar, Sénégal</p>
     </div>
 </body>
